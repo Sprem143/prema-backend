@@ -1,8 +1,9 @@
 const express= require('express')
 const router=express.Router();
 
-const {savepost}= require('./controllers/postController')
+const {savepost, fetchpost}= require('./controllers/postController')
 
-router.get('/savepost',savepost)
+router.post('/savepost',savepost);
+router.get('/fetchpost',fetchpost)
 
 module.exports=router;
